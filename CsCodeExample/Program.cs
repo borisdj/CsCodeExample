@@ -10,6 +10,7 @@ using System.Data;
 using System.Xml;
 using System.Globalization;
 using System.Xml.Linq;
+using System.Diagnostics;
 //using System.ServiceModel.Syndication;
 //using Excel = Microsoft.Office.Interop.Excel;
 
@@ -32,7 +33,7 @@ namespace CsCodeExample
             #endregion
 
             #region Output
-            Console.Write("OUTPUT");
+            Console.Write("OUTPUT:");
             Console.WriteLine("Program is running.");
 
             Console.WriteLine();
@@ -113,7 +114,7 @@ namespace CsCodeExample
             // string interpolation
             System.Console.WriteLine("City Name: " + city); // Old way to concatenate strings
             System.Console.WriteLine("City Name: {0}", city);
-            System.Console.WriteLine($"City Name: {city}"); // Newest way
+            System.Console.WriteLine($"City Name: {city}"); // Newest way, from C# 6 version
 
             System.Console.WriteLine();
             #endregion
@@ -121,12 +122,13 @@ namespace CsCodeExample
             #region Operators
             // Arithmetic Operators
             // = + - * / %
-            int x = 10, y = 6, result;
-            result = x + y;
+            int x = 10, y = 6;
+            int result = x + y;
 
             System.Console.WriteLine("OPERATORS");
             System.Console.WriteLine("a + b = " + x + " + " + y + " = " + result);
             System.Console.WriteLine("a + b = {0} + {1} = {2}", x, y, result);
+            System.Console.WriteLine($"a + b = {x} + {y} = {result}");
 
             x = x * 2;
             //x *= 2;
@@ -212,11 +214,10 @@ namespace CsCodeExample
             }
 
             int? year = null;
+            System.Console.WriteLine("Year = " + (year ?? 2017)); // (??) - null coalescing operator
 
-            System.Console.WriteLine("Correct ?? " + (year ?? 2013)); // (??) - null coalescing operator
-
-            year = 2012;
-            System.Console.WriteLine("Correct ? :" + (year < 2013 ? "Previous year" : "Current year")); // (? :) - conditional operator, ternary
+            string yearType = year % 2 == 0 ? "Even year" : "Odd year"; // (? :) - conditional operator, ternary
+            System.Console.WriteLine("Year type :" + yearType);
 
             #endregion
 
@@ -283,15 +284,21 @@ namespace CsCodeExample
 
             System.Console.Write("Five day prices: ");
             for (int i = 0; i < 5; i++)
+            {
                 System.Console.Write(fiveDayPrices[i] + " ");
+            }
 
             System.Console.Write("\nFive day prices backwards: ");
             for (int i = fiveDayPrices.Length - 1; i >= 0; i--)
+            {
                 System.Console.Write(fiveDayPrices[i] + " ");
+            }
 
             System.Console.Write("\nForeach: ");
             foreach (var element in fiveDayPrices)
+            {
                 System.Console.Write(element + " ");
+            }
 
             System.Console.WriteLine("");
 
@@ -319,6 +326,7 @@ namespace CsCodeExample
             int[,] matrixB = new int[3, 3]; // fixed size;
 
             for (int i = 0; i < 3; i++)
+            {
                 for (int j = 0; j < 3; j++)
                 {
                     matrixB[i, j] = (i * 3) + j + 1;
@@ -326,6 +334,7 @@ namespace CsCodeExample
                     if ((j + 1) % 3 == 0)
                         System.Console.WriteLine("");
                 }
+            }
 
             // A similar array with string elements. 
             string[,] array2Db = new string[3, 2] { { "one", "two" }, { "three", "four" }, { "five", "six" } };
@@ -369,8 +378,9 @@ namespace CsCodeExample
             List<char> letters = new List<char>() { 'a', 'b', 'c' };
 
             foreach (var letter in letters)
+            {
                 System.Console.Write(letter + " ");
-
+            }
             // Dictionary
             Dictionary<String, int> accounts = new Dictionary<String, int>();
             accounts.Add("Cash", 110);
@@ -429,8 +439,8 @@ namespace CsCodeExample
             }
             #endregion
 
-            #region Functions
-            System.Console.WriteLine("\nFUNCTIONS");
+            #region Methods
+            System.Console.WriteLine("\nMETHODS (Functions)");
             // Access Modifiers
             //   public    - most accessible
             //   protected - in class where declared and all derived classes
@@ -724,81 +734,6 @@ namespace CsCodeExample
                 result = result * i;
             }
             return result;
-        }
-
-        public static void RunMartinGaleSimulation()
-        {
-            Console.WriteLine("* Martingale Simulation *");
-
-            Random random = new Random();
-            Dictionary<int, int> dict = new Dictionary<int, int>();
-            int totalMoneyAmount = 2500;
-            int lastMoneyAmount = 0;
-            int sequenceLength = 0;
-            int lastSequenceLength = 0;
-            int investedMoney = 1;
-
-            int win = 0;
-            int lost = 0;
-
-            for (int j = 0, i; j < 100; j++)
-            {
-                totalMoneyAmount = 2500;
-                investedMoney = 1;
-                sequenceLength = 0;
-                dict = new Dictionary<int, int>();
-
-                for (i = 0; i < 1000000; i++)
-                {
-                    int randomValue = random.Next(0, 2);
-                    if (randomValue == 0) // win
-                    {
-                        totalMoneyAmount += investedMoney * 2;
-                        investedMoney = 1;
-                        sequenceLength++;
-                    }
-                    else // lost
-                    {
-                        lastMoneyAmount = totalMoneyAmount;
-                        lastSequenceLength = sequenceLength;
-
-                        totalMoneyAmount -= investedMoney;
-                        investedMoney = investedMoney * 2;
-
-                        if (sequenceLength > 0)
-                        {
-                            if (dict.ContainsKey(sequenceLength))
-                                dict[sequenceLength]++;
-                            else
-                                dict.Add(sequenceLength, 1);
-
-                            sequenceLength = 0;
-                        }
-                    }
-
-                    //if(i % 100000 == 0)
-                    //    Console.WriteLine(i + " = " + totalMoneyAmount);
-
-                    if (totalMoneyAmount <= 0)
-                    {
-                        lost++;
-                        break;
-                    }
-                }
-                if (i == 1000000)
-                    win++;
-            }
-            Console.WriteLine("win: " + win);
-            Console.WriteLine("lost: " + lost);
-
-            /*Console.WriteLine("SequenceLength: Occurrences");
-            var list = dict.Keys.ToList();
-            list.Sort();
-            foreach (var key in list)
-            {
-                Console.WriteLine("{0}: {1}", key, dict[key]);
-            }*/
-            Console.ReadKey();
         }
     }
 }
