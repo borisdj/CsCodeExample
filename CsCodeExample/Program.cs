@@ -85,7 +85,7 @@ namespace CsCodeExample
 
             name = "Ben Benito";
 
-            System.Console.WriteLine("c" + counter);
+            Console.WriteLine("c" + counter);
 
             // Declaration and Assignment
             bool isActive = true;
@@ -99,24 +99,24 @@ namespace CsCodeExample
             decimal secondAmount = inputAmount; // implicit cast
             int thirdAmount = (int)secondAmount; // explicit cast
             string strNum = "1234";
-            int outputNum = int.Parse(strNum);
+            int outputNum = Int32.Parse(strNum);
 
-            System.Console.WriteLine("DECLARATION");
-            System.Console.WriteLine("T of F: " + isAdmin);
-            System.Console.WriteLine("Counter: " + counter);
-            System.Console.WriteLine("Sum: " + sum);
-            System.Console.WriteLine("Number: " + number);
-            System.Console.WriteLine("Letter: " + character);
-            System.Console.WriteLine("Word or Sentance: " + name);
-            System.Console.WriteLine("Active: " + isActive);
-            System.Console.WriteLine("Finished: " + isEnded);
+            Console.WriteLine("DECLARATION");
+            Console.WriteLine("T of F: " + isAdmin);
+            Console.WriteLine("Counter: " + counter);
+            Console.WriteLine("Sum: " + sum);
+            Console.WriteLine("Number: " + number);
+            Console.WriteLine("Letter: " + character);
+            Console.WriteLine("Word or Sentance: " + name);
+            Console.WriteLine("Active: " + isActive);
+            Console.WriteLine("Finished: " + isEnded);
 
             // string interpolation
-            System.Console.WriteLine("City Name: " + city); // Old way to concatenate strings
-            System.Console.WriteLine("City Name: {0}", city);
-            System.Console.WriteLine($"City Name: {city}"); // Newest way, from C# 6 version
+            Console.WriteLine("City Name: " + city); // Old way to concatenate strings
+            Console.WriteLine("City Name: {0}", city);
+            Console.WriteLine($"City Name: {city}"); // Newest way, from C# 6 version
 
-            System.Console.WriteLine();
+            Console.WriteLine();
             #endregion
 
             #region Operators
@@ -125,10 +125,10 @@ namespace CsCodeExample
             int x = 10, y = 6;
             int result = x + y;
 
-            System.Console.WriteLine("OPERATORS");
-            System.Console.WriteLine("a + b = " + x + " + " + y + " = " + result);
-            System.Console.WriteLine("a + b = {0} + {1} = {2}", x, y, result);
-            System.Console.WriteLine($"a + b = {x} + {y} = {result}");
+            Console.WriteLine("OPERATORS");
+            Console.WriteLine("a + b = " + x + " + " + y + " = " + result);
+            Console.WriteLine("a + b = {0} + {1} = {2}", x, y, result);
+            Console.WriteLine($"a + b = {x} + {y} = {result}");
 
             x = x * 2;
             //x *= 2;
@@ -139,12 +139,12 @@ namespace CsCodeExample
             //x = x - 1;
             //x--;
 
-            System.Console.WriteLine("x = x * 2 + 1 = " + x);
-            System.Console.WriteLine("r = x++ = " + x++);
-            System.Console.WriteLine("x= " + x);
-            System.Console.WriteLine("r = ++x = " + ++x);
-            System.Console.WriteLine("x = " + x);
-            System.Console.WriteLine("");
+            Console.WriteLine("x = x * 2 + 1 = " + x);
+            Console.WriteLine("r = x++ = " + x++);
+            Console.WriteLine("x= " + x);
+            Console.WriteLine("r = ++x = " + ++x);
+            Console.WriteLine("x = " + x);
+            Console.WriteLine("");
 
             // Relation Operators
             // == !=  > >= < <=
@@ -156,73 +156,73 @@ namespace CsCodeExample
             #endregion
 
             #region Selection Statements
-            System.Console.WriteLine("SELECTION STATEMENTS");
+            Console.WriteLine("SELECTION STATEMENTS");
             // if, else, switch, case
 
             bool print = true;
 
             if (print)
-                System.Console.WriteLine("true - ");
+                Console.WriteLine("true - ");
 
             print = false;
 
             if (print)
-                System.Console.WriteLine("false - no output");
+                Console.WriteLine("false - no output");
 
             if (!print)
-                System.Console.WriteLine("not false = true - output");
+                Console.WriteLine("not false = true - output");
 
             int age = 20;
             if (age > 18)
-                System.Console.WriteLine("Adult");
+                Console.WriteLine("Adult");
             else
-                System.Console.WriteLine("Minor");
+                Console.WriteLine("Minor");
 
             int value = 23; // value range 0-29
             string clause = "Value is from-to: ";
 
             if (value > 0 && value < 10)
-                System.Console.WriteLine(clause + "0-9");
+                Console.WriteLine(clause + "0-9");
             else if (value > 10 && value < 20)
-                System.Console.WriteLine(clause + "10-19");
+                Console.WriteLine(clause + "10-19");
             else if (value > 20 && value < 30)
-                System.Console.WriteLine(clause + "20-29");
+                Console.WriteLine(clause + "20-29");
             else
-                System.Console.WriteLine(clause + "> 30");
+                Console.WriteLine(clause + "> 30");
 
 
             int mod = value % 3;
 
             if (mod == 1)
-                System.Console.WriteLine("Remainder 1");
+                Console.WriteLine("Remainder 1");
             else if (mod == 2)
-                System.Console.WriteLine("Remainder 2");
+                Console.WriteLine("Remainder 2");
             else
-                System.Console.WriteLine("Divisible with 3");
+                Console.WriteLine("Divisible with 3");
 
             switch (mod)
             {
                 case 1:
-                    System.Console.WriteLine("Remainder 1");
+                    Console.WriteLine("Remainder 1");
                     break;
                 case 2:
-                    System.Console.WriteLine("Remainder 2");
+                    Console.WriteLine("Remainder 2");
                     break;
                 default:
-                    System.Console.WriteLine("Divisible with 3");
+                    Console.WriteLine("Divisible with 3");
                     break;
             }
 
             int? year = null;
-            System.Console.WriteLine("Year = " + (year ?? 2017)); // (??) - null coalescing operator
+            Console.WriteLine("Year = " + (year ?? 2017)); // (??) - null coalescing operator
 
             string yearType = year % 2 == 0 ? "Even year" : "Odd year"; // (? :) - conditional operator, ternary
-            System.Console.WriteLine("Year type :" + yearType);
+            Console.WriteLine("Year type :" + yearType);
 
             #endregion
 
             #region Iteration Statements
-            System.Console.WriteLine("ITERATION STATEMENTS");
+            Console.WriteLine("ITERATION STATEMENTS");
             // for, while, do, foreach, in
 
             // Jump statements
@@ -232,48 +232,48 @@ namespace CsCodeExample
             // throw, try-catch
 
 
-            System.Console.Write("For loop: ");
+            Console.Write("For loop: ");
 
             for (int i = 1; i <= 5; i++)
-                System.Console.Write(i + " ");
+                Console.Write(i + " ");
 
-            System.Console.WriteLine("");
-            System.Console.Write("While a): ");
+            Console.WriteLine("");
+            Console.Write("While a): ");
             int k = 40;
             //do
             while (k < 20)
             {
                 k = k * 2;
-                System.Console.Write(k + " ");
+                Console.Write(k + " ");
             } //while (k < 20);
 
-            System.Console.WriteLine("");
-            System.Console.Write("While b): ");
+            Console.WriteLine("");
+            Console.Write("While b): ");
             k = 1;
             while (k < 20)
             {
                 k = k * 2;
                 if (k == 8)
                     break;
-                System.Console.Write(k + " ");
+                Console.Write(k + " ");
             }
 
-            System.Console.WriteLine("");
-            System.Console.Write("While c): ");
+            Console.WriteLine("");
+            Console.Write("While c): ");
             k = 1;
             while (k < 20)
             {
                 k = k * 2;
                 if (k == 8)
                     continue;
-                System.Console.Write(k + " ");
+                Console.Write(k + " ");
             }
 
-            System.Console.Write("\n\n");
+            Console.Write("\n\n");
             #endregion
 
             #region Arrays
-            System.Console.WriteLine("ARRAYS");
+            Console.WriteLine("ARRAYS");
 
             double[] fiveDayPrices = new double[5]; // fixed size;
             fiveDayPrices[0] = 3.45;
@@ -282,27 +282,27 @@ namespace CsCodeExample
             fiveDayPrices[3] = 3.30;
             fiveDayPrices[4] = 3.32;
 
-            System.Console.Write("Five day prices: ");
+            Console.Write("Five day prices: ");
             for (int i = 0; i < 5; i++)
             {
-                System.Console.Write(fiveDayPrices[i] + " ");
+                Console.Write(fiveDayPrices[i] + " ");
             }
 
-            System.Console.Write("\nFive day prices backwards: ");
+            Console.Write("\nFive day prices backwards: ");
             for (int i = fiveDayPrices.Length - 1; i >= 0; i--)
             {
-                System.Console.Write(fiveDayPrices[i] + " ");
+                Console.Write(fiveDayPrices[i] + " ");
             }
 
-            System.Console.Write("\nForeach: ");
+            Console.Write("\nForeach: ");
             foreach (var element in fiveDayPrices)
             {
-                System.Console.Write(element + " ");
+                Console.Write(element + " ");
             }
 
-            System.Console.WriteLine("");
+            Console.WriteLine("");
 
-            System.Console.WriteLine("Matrix");
+            Console.WriteLine("Matrix");
             // Multidimensional arrays
             // Two-dimensional array. 
             int[,] matrix = new int[3, 3]; // fixed size;
@@ -319,9 +319,9 @@ namespace CsCodeExample
 
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)
-                    System.Console.Write(matrix[i, j] + " ");
+                    Console.Write(matrix[i, j] + " ");
 
-            System.Console.WriteLine();
+            Console.WriteLine();
 
             int[,] matrixB = new int[3, 3]; // fixed size;
 
@@ -330,9 +330,9 @@ namespace CsCodeExample
                 for (int j = 0; j < 3; j++)
                 {
                     matrixB[i, j] = (i * 3) + j + 1;
-                    System.Console.Write(matrixB[i, j] + " ");
+                    Console.Write(matrixB[i, j] + " ");
                     if ((j + 1) % 3 == 0)
-                        System.Console.WriteLine("");
+                        Console.WriteLine("");
                 }
             }
 
@@ -343,7 +343,7 @@ namespace CsCodeExample
             int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
 
 
-            System.Console.WriteLine("Dif. Matrix");
+            Console.WriteLine("Dif. Matrix");
             // Array(Jagged) that can have different row size
             int[][] jaggedArray = new int[3][];
             for (int i = 0; i < 3; i++)
@@ -353,9 +353,9 @@ namespace CsCodeExample
                 {
                     jaggedArray[i] = new int[(i + 1)];
                     jaggedArray[i][j] = (i * 3) + j + 1;
-                    System.Console.Write(jaggedArray[i][j] + " ");
+                    Console.Write(jaggedArray[i][j] + " ");
                     if ((j + 1) % (i + 1) == 0)
-                        System.Console.WriteLine("");
+                        Console.WriteLine("");
                 }
             }
 
@@ -368,18 +368,18 @@ namespace CsCodeExample
             words.Add("five");
             words.Remove("three");
 
-            System.Console.WriteLine("");
+            Console.WriteLine("");
             foreach (var word in words)
-                System.Console.Write(word + " ");
+                Console.Write(word + " ");
 
-            System.Console.WriteLine("\n" + words[1]);
-            System.Console.WriteLine(words.ElementAt(1));
+            Console.WriteLine("\n" + words[1]);
+            Console.WriteLine(words.ElementAt(1));
 
             List<char> letters = new List<char>() { 'a', 'b', 'c' };
 
             foreach (var letter in letters)
             {
-                System.Console.Write(letter + " ");
+                Console.Write(letter + " ");
             }
             // Dictionary
             Dictionary<String, int> accounts = new Dictionary<String, int>();
@@ -391,7 +391,7 @@ namespace CsCodeExample
             int account;
             accounts.TryGetValue("Supplies", out account);
 
-            System.Console.Write("\nSupplies account: " + account);
+            Console.Write("\nSupplies account: " + account);
 
 
             List<string> sentences = new List<string>();
@@ -406,9 +406,9 @@ namespace CsCodeExample
             IEnumerable<string> ingEndSentences = sentences.Where(a => a.EndsWith("ing")); // StartsWidth, Contains
             List<string> ingEndSentences2 = sentences.Where(a => a.EndsWith("ing")).ToList(); // StartsWidth, Contains
 
-            System.Console.WriteLine("\nING:");
+            Console.WriteLine("\nING:");
             foreach (var sentence in ingEndSentences2)
-                System.Console.WriteLine(sentence);
+                Console.WriteLine(sentence);
 
             List<string> ingEndSentences3 = new List<string>();
             foreach (var sentence in sentences)
@@ -418,29 +418,29 @@ namespace CsCodeExample
             #endregion
 
             #region Parsing and Exceptions
-            System.Console.WriteLine("\n\nPARSING AND EXCEPTIONS");
+            Console.WriteLine("\n\nPARSING AND EXCEPTIONS");
 
             string customNumStr = "324erer";
             int customNum;
             var validNum = int.TryParse(customNumStr, out customNum);
             if (validNum)
-                System.Console.WriteLine(customNum);
+                Console.WriteLine(customNum);
             else
-                System.Console.WriteLine("Parse Error");
+                Console.WriteLine("Parse Error");
 
             try
             {
-                customNum = int.Parse(customNumStr);
+                customNum = Int32.Parse(customNumStr);
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine("Exception:\n" + ex.StackTrace + "\n");
+                Console.WriteLine("Exception:\n" + ex.StackTrace + "\n");
                 //throw new Exception("Exception on Parsing string to int.");
             }
             #endregion
 
             #region Methods
-            System.Console.WriteLine("\nMETHODS (Functions)");
+            Console.WriteLine("\nMETHODS (Functions)");
             // Access Modifiers
             //   public    - most accessible
             //   protected - in class where declared and all derived classes
@@ -461,46 +461,46 @@ namespace CsCodeExample
             int num3 = 3;
 
             decimal summary = Divide(num1, num2); // num1, num2 are Arguments - values on function call
-            System.Console.WriteLine("{0} / {1} = {2}", num1, num2, summary);
+            Console.WriteLine("{0} / {1} = {2}", num1, num2, summary);
 
-            System.Console.WriteLine("{0} * {1} * {2} = {3}", num1, num2, num3, Multiple(num1, num2, num3));
-            System.Console.WriteLine("{0} * {1} = {2}", num1, num2, Multiple(num1, num2));
-            System.Console.WriteLine("{0} * {0} = {1}", num1, Multiple(num1));
+            Console.WriteLine("{0} * {1} * {2} = {3}", num1, num2, num3, Multiple(num1, num2, num3));
+            Console.WriteLine("{0} * {1} = {2}", num1, num2, Multiple(num1, num2));
+            Console.WriteLine("{0} * {0} = {1}", num1, Multiple(num1));
 
-            System.Console.WriteLine("5! = " + Fact(5)); //Recursion
-            System.Console.WriteLine("6! = " + Factorial(6));
+            Console.WriteLine("5! = " + Fact(5)); //Recursion
+            Console.WriteLine("6! = " + Factorial(6));
 
-            System.Console.WriteLine("Log10(136) = " + Math.Log10(136));
+            Console.WriteLine("Log10(136) = " + Math.Log10(136));
 
             #endregion
 
             #region Enum
-            System.Console.WriteLine("\nENUM"); // Enumerator
+            Console.WriteLine("\nENUM"); // Enumerator
 
             Gender wordGender = Gender.Neutrum;
             Gender word2Gender = (Gender)1; // cast
 
-            System.Console.WriteLine("word Gender: " + wordGender);
-            System.Console.WriteLine("word2 Gender: " + word2Gender);
+            Console.WriteLine("word Gender: " + wordGender);
+            Console.WriteLine("word2 Gender: " + word2Gender);
             if (wordGender == Gender.Neutrum)
             {
-                System.Console.WriteLine("word Gender: " + wordGender.ToString());
-                System.Console.WriteLine("word Gender Id: " + (int)wordGender);
+                Console.WriteLine("word Gender: " + wordGender.ToString());
+                Console.WriteLine("word Gender Id: " + (int)wordGender);
             }
 
             Sex personSex = Sex.Male;
-            System.Console.WriteLine("Sex: " + personSex.ToString());
-            System.Console.WriteLine("Sex: " + personSex.GetDescription());
+            Console.WriteLine("Sex: " + personSex.ToString());
+            Console.WriteLine("Sex: " + personSex.GetDescription());
 
-            System.Console.WriteLine("All Genders:");
+            Console.WriteLine("All Genders:");
             foreach (Gender gender in Enum.GetValues(typeof(Gender)))
-                System.Console.WriteLine("- {0}", gender.GetDescription());
+                Console.WriteLine("- {0}", gender.GetDescription());
 
 
             #endregion
 
             #region Classes
-            System.Console.WriteLine("\nCLASSES");
+            Console.WriteLine("\nCLASSES");
 
             decimal xReal = 2, xImag = 3;
             decimal yReal = 4, yImag = 5;
@@ -516,16 +516,16 @@ namespace CsCodeExample
 
             // System Class
             DateTime currentDate = DateTime.Now;
-            System.Console.WriteLine("DateTime.Now() = {0}", currentDate);
-            System.Console.WriteLine("Date = {0} ", currentDate.ToString("dd.MM.yyyy"));
-            System.Console.WriteLine("Date = {0:dd.MM.yyyy} ", currentDate);
-            System.Console.WriteLine("Year = " + currentDate.Year);
+            Console.WriteLine("DateTime.Now() = {0}", currentDate);
+            Console.WriteLine("Date = {0} ", currentDate.ToString("dd.MM.yyyy"));
+            Console.WriteLine("Date = {0:dd.MM.yyyy} ", currentDate);
+            Console.WriteLine("Year = " + currentDate.Year);
 
             // Custom Classes
             // ComplexNumber
-            System.Console.WriteLine("");
-            System.Console.WriteLine(ComplexNumber.Format);
-            System.Console.WriteLine(ComplexNumber.GetDescription());
+            Console.WriteLine("");
+            Console.WriteLine(ComplexNumber.Format);
+            Console.WriteLine(ComplexNumber.GetDescription());
 
             ComplexNumber complex0 = new ComplexNumber();
             complex0.Real = 1;
@@ -552,28 +552,28 @@ namespace CsCodeExample
 
             ComplexNumber division = complex1.Divide(complex2);
 
-            System.Console.WriteLine("c0 = " + complex0);
-            System.Console.WriteLine("c1 = " + complex1);
-            System.Console.WriteLine("c2 = " + complex2.ToString());
-            System.Console.WriteLine("c3 = " + complex3.ToDiffString());
-            System.Console.WriteLine("c4 = " + complex4.ToDiffString());
+            Console.WriteLine("c0 = " + complex0);
+            Console.WriteLine("c1 = " + complex1);
+            Console.WriteLine("c2 = " + complex2.ToString());
+            Console.WriteLine("c3 = " + complex3.ToDiffString());
+            Console.WriteLine("c4 = " + complex4.ToDiffString());
 
-            System.Console.WriteLine("\nsummation = " + summation.ToDiffString());
-            System.Console.WriteLine("division = " + division.ToDiffString());
-            System.Console.WriteLine("minus = " + new ComplexNumber(2, -5).ToDiffString());
-            System.Console.WriteLine("real = " + new ComplexNumber(7, 0).ToDiffString());
+            Console.WriteLine("\nsummation = " + summation.ToDiffString());
+            Console.WriteLine("division = " + division.ToDiffString());
+            Console.WriteLine("minus = " + new ComplexNumber(2, -5).ToDiffString());
+            Console.WriteLine("real = " + new ComplexNumber(7, 0).ToDiffString());
 
-            System.Console.WriteLine("c1(modul) = " + complex1.Modul());
-            System.Console.WriteLine("c1 ^ 0 =" + complex1.Pow(0));
-            System.Console.WriteLine("c1 ^ 1 =" + complex1.Pow(1));
-            System.Console.WriteLine("c1 ^ 2 =" + complex1.Pow(2));
-            System.Console.WriteLine("c1 ^ 4 =" + complex1.Pow(2));
-            System.Console.WriteLine("c1 ^ (-2) =" + complex1.Pow(-2));
+            Console.WriteLine("c1(modul) = " + complex1.Modul());
+            Console.WriteLine("c1 ^ 0 =" + complex1.Pow(0));
+            Console.WriteLine("c1 ^ 1 =" + complex1.Pow(1));
+            Console.WriteLine("c1 ^ 2 =" + complex1.Pow(2));
+            Console.WriteLine("c1 ^ 4 =" + complex1.Pow(2));
+            Console.WriteLine("c1 ^ (-2) =" + complex1.Pow(-2));
 
             List<ComplexNumber> roots = complex1.Nroot(3);
-            System.Console.WriteLine("c1 ^ (1/3) = ");
+            Console.WriteLine("c1 ^ (1/3) = ");
             foreach (var c in roots)
-                System.Console.WriteLine(c);
+                Console.WriteLine(c);
 
             // User
             User user = new User()
@@ -602,40 +602,40 @@ namespace CsCodeExample
                 Street = "Baker Street"
             };
 
-            System.Console.WriteLine("\nUSER: " + user);
-            System.Console.WriteLine("Year of Birth: " + user.BirthDate.Year);
-            System.Console.WriteLine("Year of Birth: " + user.HomeAddress.City);
+            Console.WriteLine("\nUSER: " + user);
+            Console.WriteLine("Year of Birth: " + user.BirthDate.Year);
+            Console.WriteLine("Year of Birth: " + user.HomeAddress.City);
 
             Square Square = new Square(4);
-            System.Console.WriteLine("Square(side:4), area = " + Square.CalcArea());
+            Console.WriteLine("Square(side:4), area = " + Square.CalcArea());
 
             #endregion
 
             #region InputConsole
-            System.Console.WriteLine("INPUT (console)");
+            Console.WriteLine("INPUT (console)");
             string input = null;
 
             while (input != "")
             {
-                System.Console.Write("\nInput number:");
-                input = System.Console.ReadLine();
+                Console.Write("\nInput number:");
+                input = Console.ReadLine();
                 int inputNum;
                 bool inputValid = int.TryParse(input, out inputNum);
                 if (inputValid)
-                    System.Console.WriteLine("Number is valid. (Press Enter to Finish)\n");
+                    Console.WriteLine("Number is valid. (Press Enter to Finish)\n");
                 else
-                    System.Console.WriteLine("Number is not valid.(Press Enter to Finish)\n");
+                    Console.WriteLine("Number is not valid.(Press Enter to Finish)\n");
             }
             #endregion
 
             #region InputFile
-            System.Console.WriteLine("INPUT (file)");
-            System.Console.Write("\nInput file path(Enter for no file, 'd' for default[ComplexIn.csv]): ");
+            Console.WriteLine("INPUT (file)");
+            Console.Write("\nInput file path(Enter for no file, 'd' for default[ComplexIn.csv]): ");
 
             string desktop_path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//";
 
             string filePath = null;
-            string inputFilePath = System.Console.ReadLine();
+            string inputFilePath = Console.ReadLine();
             if (inputFilePath == "d")
                 inputFilePath = "ComplexIn.csv";
             if (inputFilePath != "")
@@ -668,8 +668,8 @@ namespace CsCodeExample
                 }
             #endregion
 
-            System.Console.WriteLine("Press Enter for Quit.");
-            System.Console.ReadKey();
+            Console.WriteLine("Press Enter for Quit.");
+            Console.ReadKey();
             // Don't copy code, all that is repeated should be in functions
         }
 
@@ -694,7 +694,7 @@ namespace CsCodeExample
 
         public static void PrintText(string input) // Name Convention: PascalCase Notation
         {
-            System.Console.WriteLine(input);
+            Console.WriteLine(input);
         }
 
         public static decimal Divide(decimal dividend, decimal divisor)
