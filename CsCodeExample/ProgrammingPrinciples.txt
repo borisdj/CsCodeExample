@@ -5,7 +5,7 @@ YAGNI - You Aren't Gonna Need It, but have as much as you can out of the box
 KISS  - Keep it simple, stupid
 	"Good design is as little design as possible." - Dieter Rams
 	"Everything should be made as simple as possible, but not simpler."
-GRASP - General Responsibility Assignment Software Patterns
+LoD   - Law of Demeter or principle of least knowledge 
 SoC   - Separation of Concerns
 		layers: presentation, business(service), DAL - data access layer, DB - database
 DDD   - Domain Driven Design
@@ -13,6 +13,7 @@ DDD   - Domain Driven Design
 		https://msdn.microsoft.com/en-us/library/ff649690.aspx
 	DI - Dependecy Injection (IoC - Inversion of Control), loosely-coupled
 PRG pattern - Post/Redirect/Get
+GRASP - General Responsibility Assignment Software Patterns
 
 OOP - Object Oriented Programming
 SOLID (object-oriented design) (SolidInPictures)[https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/]
