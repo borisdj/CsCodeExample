@@ -46,9 +46,9 @@ namespace CsCodeExample
             bool    / Boolean   (true, false)                   [default: false]
             int     / Int32     (+- 2,147,483,647)              [default: 0]
             long    / Int64     (+- 9,223,372,036,854,775,807)  [default: 0]
-            float               (+- 3.40282347 E+38)            [default: 0]
-            double              (+- 1.7976931348623157 E+308)   [default: 0]
-            decimal / Decimal   (+- E+28 precision)             [default: 0]
+            float               (+- 1.5 E−45 to +- 3.40282347 E+38)            [default: 0]  Precision: ~6-9 digits
+            double              (+- 5.0 E−324 to +- 1.7976931348623157 E+308)  [default: 0]  Precision: ~15-17 digits
+            decimal / Decimal   (+- 1.0 E-28 to +- 7.9228 E28)                 [default: 0]  Precision: 28-29 digits
             char    / Char                                      [default: '']
             string  / String                                    [default: null, nullable]
             var // can be any type
@@ -90,9 +90,10 @@ namespace CsCodeExample
             // Declaration and Assignment
             bool isActive = true;
 
-            // Nullable
+            // Nullable (can take all values of its underlying value type and an additional null value)
             bool? isEnded = null;
             string city = null;
+            // String is null (and therefore nullable) by default, so there's no need for this notation)
 
             // Cast
             int inputAmount = 126;
@@ -102,7 +103,7 @@ namespace CsCodeExample
             int outputNum = Int32.Parse(strNum);
 
             Console.WriteLine("DECLARATION");
-            Console.WriteLine("T of F: " + isAdmin);
+            Console.WriteLine("T or F: " + isAdmin);
             Console.WriteLine("Counter: " + counter);
             Console.WriteLine("Sum: " + sum);
             Console.WriteLine("Number: " + number);
@@ -122,7 +123,7 @@ namespace CsCodeExample
             #region Operators
             // Arithmetic Operators
             // = + - * / %
-            int x = 10, y = 6;
+            int x = 10, y = 6; // Declaration and assignment of multiple variables of the same type at once
             int result = x + y;
 
             Console.WriteLine("OPERATORS");
@@ -140,9 +141,9 @@ namespace CsCodeExample
             //x--;
 
             Console.WriteLine("x = x * 2 + 1 = " + x);
-            Console.WriteLine("r = x++ = " + x++);
+            Console.WriteLine("r = x++ = " + x++); // output is the value of x BEFORE incrementing
             Console.WriteLine("x= " + x);
-            Console.WriteLine("r = ++x = " + ++x);
+            Console.WriteLine("r = ++x = " + ++x); // output is the value of x AFTER incrementing
             Console.WriteLine("x = " + x);
             Console.WriteLine("");
 
@@ -155,8 +156,8 @@ namespace CsCodeExample
             // !  NOT
             #endregion
 
-            #region Selection Statements
-            Console.WriteLine("SELECTION STATEMENTS");
+            #region Selection Statements (Conditionals)
+            Console.WriteLine("SELECTION STATEMENTS (Conditionals)");
             // if, else, switch, case
 
             bool print = true;
@@ -181,14 +182,14 @@ namespace CsCodeExample
             int value = 23; // value range 0-29
             string clause = "Value is from-to: ";
 
-            if (value > 0 && value < 10)
+            if (value >= 0 && value < 10)
                 Console.WriteLine(clause + "0-9");
-            else if (value > 10 && value < 20)
+            else if (value >= 10 && value < 20)
                 Console.WriteLine(clause + "10-19");
-            else if (value > 20 && value < 30)
+            else if (value >= 20 && value < 30)
                 Console.WriteLine(clause + "20-29");
             else
-                Console.WriteLine(clause + "> 30");
+                Console.WriteLine(clause + "30+");
 
 
             int mod = value % 3;
@@ -214,9 +215,11 @@ namespace CsCodeExample
             }
 
             int? year = null;
-            Console.WriteLine("Year = " + (year ?? 2017)); // (??) - null coalescing operator
+            // null coalescing operator (??) - returns the value of its left-hand operand if it isn't null; otherwise, it evaluates the right-hand operand and returns its result
+            Console.WriteLine("Year = " + (year ?? 2017)); // returns 2017, as year == null
 
             string yearType = year % 2 == 0 ? "Even year" : "Odd year"; // (? :) - conditional operator, ternary
+            // General case:  result = condition ? result if condition is true : result if condition is false;
             Console.WriteLine("Year type :" + yearType);
 
             #endregion
@@ -239,13 +242,13 @@ namespace CsCodeExample
 
             Console.WriteLine("");
             Console.Write("While a): ");
+            // Do - while loop, executes at least once, even if the condition is not fulfilled
             int k = 40;
-            //do
-            while (k < 20)
+            do
             {
                 k = k * 2;
                 Console.Write(k + " ");
-            } //while (k < 20);
+            } while (k < 20);
 
             Console.WriteLine("");
             Console.Write("While b): ");
@@ -345,6 +348,8 @@ namespace CsCodeExample
 
             Console.WriteLine("Dif. Matrix");
             // Array(Jagged) that can have different row size
+
+            // This could be clarified!
             int[][] jaggedArray = new int[3][];
             for (int i = 0; i < 3; i++)
             {
@@ -403,8 +408,9 @@ namespace CsCodeExample
             sentences.Remove("He runs");
 
             // Lambda expresion =>
-            IEnumerable<string> ingEndSentences = sentences.Where(a => a.EndsWith("ing")); // StartsWidth, Contains
-            List<string> ingEndSentences2 = sentences.Where(a => a.EndsWith("ing")).ToList(); // StartsWidth, Contains
+            IEnumerable<string> ingEndSentences = sentences.Where(a => a.EndsWith("ing")); // EndsWith, Contains
+            List<string> ingEndSentences2 = sentences.Where(a => a.EndsWith("ing")).ToList(); // EndsWith, Contains
+            // I think you made a typo in comments.
 
             Console.WriteLine("\nING:");
             foreach (var sentence in ingEndSentences2)
@@ -460,8 +466,8 @@ namespace CsCodeExample
             decimal num2 = 2.5m;
             int num3 = 3;
 
-            decimal summary = Divide(num1, num2); // num1, num2 are Arguments - values on function call
-            Console.WriteLine("{0} / {1} = {2}", num1, num2, summary);
+            decimal quotient = Divide(num1, num2); // num1, num2 are Arguments - values on function call
+            Console.WriteLine("{0} / {1} = {2}", num1, num2, quotient);
 
             Console.WriteLine("{0} * {1} * {2} = {3}", num1, num2, num3, Multiple(num1, num2, num3));
             Console.WriteLine("{0} * {1} = {2}", num1, num2, Multiple(num1, num2));
@@ -604,7 +610,7 @@ namespace CsCodeExample
 
             Console.WriteLine("\nUSER: " + user);
             Console.WriteLine("Year of Birth: " + user.BirthDate.Year);
-            Console.WriteLine("Year of Birth: " + user.HomeAddress.City);
+            Console.WriteLine("City: " + user.HomeAddress.City);
 
             Square Square = new Square(4);
             Console.WriteLine("Square(side:4), area = " + Square.CalcArea());
@@ -714,6 +720,7 @@ namespace CsCodeExample
             return m1 * m1;
         }
 
+        // Recursion
         public static int Fact(int n)
         {
             if (n <= 1)
