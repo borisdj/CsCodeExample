@@ -14,3 +14,41 @@ Containing:
 - Classes
 - Console Input
 - File Read & Write
+
+# Naming Conventions
+Local variables - nonCapitalLetter, camelCase.  
+Class, Function(Method - in a class) and Property name - CapitalLetter, PascalCase.  
+DO choose easily readable identifier names(exmample HorizontalAlignment more English-readable than AlignmentHorizontal).  
+DO favor readability over brevity.  
+The property name CanScrollHorizontally is better than ScrollableX (an obscure reference to the X-axis).  
+DO NOT use underscores(Hungarian notation), hyphens, or any other nonalphanumeric characters.  
+AVOID using identifiers that conflict with keywords of widely used programming languages.  
+
+# Programming Principles:
+**DRY** . - Don't repeat yourself  
+**YAGNI** - You Aren't Gonna Need It, but have as much as you can out of the box  
+**KISS**. - Keep it simple, stupid - Kelly Johnson  
+	"Good design is as little design as possible." - Dieter Rams  
+	"Everything should be made as simple as possible, but not simpler." - Albert Einstein  
+	"Complexity is your enemy. Any fool can make something complicated. It is hard to keep things simple." - Richard Branson  
+	"Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple." - Steve Jobs  
+	"I have made this letter longer than usual, only because I have not had the time to make it shorter." - Blaise Pascal  
+	"I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures." - Lao Tzu  
+
+**LoD**   - Law of Demeter or principle of least knowledge  
+**SoC**   - Separation of Concerns  
+		layers: presentation, business(service), DAL - data access layer, DB - database  
+**DDD**   - Domain Driven Design  
+	Repository pattern (allows dependency injection and unit test for EF)  
+		https://msdn.microsoft.com/en-us/library/ff649690.aspx  
+	DI - Dependecy Injection (IoC - Inversion of Control), loosely-coupled  
+PRG pattern - Post/Redirect/Get  
+**GRASP** - General Responsibility Assignment Software Patterns  
+
+**OOP** - Object Oriented Programming  
+**SOLID** (object-oriented design) [SolidInPictures](https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/)  
+S: SRP - Single Responsibility Principle (a class should have only a single responsibility)  
+O: OCP - Open/Closed Principle (software entities[classes, modules, functions..] should be open for extension, but closed for modification)  
+L: LSP - Liskov Substitution Principle (objects should be replaceable with instances of their subtypes without altering the correctness of program)  
+I: ISP - Interface Segregation Principle (many client-specific interfaces are better than one general-purpose interface)  
+D: DIP - Dependency Inversion Principle (one should 'Depend upon Abstractions'. Do not depend upon concretions, Dependency injection one method)  
