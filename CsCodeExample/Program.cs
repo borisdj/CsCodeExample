@@ -407,10 +407,9 @@ namespace CsCodeExample
             sentences.Add("He is running");
             sentences.Remove("He runs");
 
-            // Lambda expresion =>
+            // Lambda expression =>
             IEnumerable<string> ingEndSentences = sentences.Where(a => a.EndsWith("ing")); // EndsWith, Contains
             List<string> ingEndSentences2 = sentences.Where(a => a.EndsWith("ing")).ToList(); // EndsWith, Contains
-            // I think you made a typo in comments.
 
             Console.WriteLine("\nING:");
             foreach (var sentence in ingEndSentences2)
