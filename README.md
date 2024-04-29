@@ -26,7 +26,7 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 # Programming Principles:
 **DRY** . - Don't repeat yourself  
 **YAGNI** - You Aren't Gonna Need It (but have as much as you can out of the box)  
-**KISS**. - Keep it simple, stupid - Kelly Johnson  
+**KISS**. - Keep it simple, stupid - [Kelly Johnson](https://en.wikipedia.org/wiki/Kelly_Johnson (engineer))  
 	"*Good design is as little design as possible.*" - Dieter Rams  
 	"*Everything should be made as simple as possible, but not simpler.*" - Albert Einstein  
 	"*Complexity is your enemy. Any fool can make something complicated. It's hard to keep things simple.*"-Richard Branson  
