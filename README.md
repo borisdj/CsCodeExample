@@ -30,7 +30,7 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 **KISS**. - Keep it simple, stupid - Kelly Johnson  
 	"*Good design is as little design as possible.*" - Dieter Rams  
 	"*Everything should be made as simple as possible, but not simpler.*" - Albert Einstein  
-	"*Complexity is your enemy. Any fool can make something complicated. It's hard to keep things simple.*" - Richard Branson  
+	"*Complexity is your enemy. Any fool can make something complicated. It's hard to keep things simple.*"- Richard Branson  
 	"*Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple.*" - Steve Jobs  
 	"*I have made this letter longer than usual, only because I have not had the time to make it shorter.*" - Blaise Pascal  
 	"*I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.*" - Lao Tzu  
