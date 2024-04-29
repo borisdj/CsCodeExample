@@ -39,8 +39,7 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 **SoC**   - Separation of Concerns  
 		layers: presentation, business(service), DAL - data access layer, DB - database  
 **DDD**   - Domain Driven Design  
-	Repository pattern (allows dependency injection and unit test for EF)  
-		https://msdn.microsoft.com/en-us/library/ff649690.aspx  
+	Repository pattern [msdn/RP](https://msdn.microsoft.com/en-us/library/ff649690.aspx) (allows dependency injection and unit test for EF)  
 	DI - Dependecy Injection (IoC - Inversion of Control), loosely-coupled  
 PRG pattern - Post/Redirect/Get  
 **GRASP** - General Responsibility Assignment Software Patterns  
