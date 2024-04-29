@@ -18,8 +18,8 @@ Containing:
 # Naming Conventions
 Local variables - nonCapitalLetter, camelCase.  
 Class, Function (Method - in a class) and Property name - CapitalLetter, PascalCase.  
-DO choose easily readable identifier names (eg. HorizontalAlignment more English-readable than AlignmentHorizontal).  
-DO favor readability over brevity (property name CanScrollHorizontally better than ScrollableX (obscure X-axis reference).  
+DO choose easy readable identifier (eg. HorizontalAlignment more English-readable than AlignmentHorizontal).  
+DO favor readability over brevity (property CanScrollHorizontally better than ScrollableX (obscure X-axis ref).  
 DO NOT use underscores (Hungarian notation), hyphens, or any other nonalphanumeric characters.  
 AVOID using identifiers that conflict with keywords of widely used programming languages.  
 
