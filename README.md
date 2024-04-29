@@ -37,7 +37,7 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 **LoD**   - Law of Demeter or principle of least knowledge  
 **SoC**   - Separation of Concerns; Layers: presentation, business(service), DAL - data access layer, DB - database  
 **DDD**   - Domain Driven Design  
- _ Repository Pattern [msdn/RP](https://msdn.microsoft.com/en-us/library/ff649690.aspx) (allows dependency injection and unit test for EF)  
+ _ **RP** - Repository Pattern [msdn/TheRepoPattern](https://msdn.microsoft.com/en-us/library/ff649690.aspx) (allows dependency injection and unit test for EF)  
  _ **DI** - Dependecy Injection (**IoC** - Inversion of Control), loosely-coupled  
 **PRG** pattern - Post/Redirect/Get  
 **GRASP** - General Responsibility Assignment Software Patterns  
