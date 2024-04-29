@@ -46,6 +46,6 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 **SOLID** (object-oriented design) [SolidInPictures](https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/)  
 S: SRP - Single Responsibility Principle (a class should have only a single responsibility)  
 O: OCP - Open/Closed Principle (entities[class, function,..] to be open for extension, closed for modification)  
-L: LSP - Liskov Substitution Principle (objects replaceable with subtypes instances without altering program correctness)  
+L: LSP - Liskov Substitution Principle (objects replaceable with subtypes instances without altering correctness)  
 I: ISP - Interface Segregation Principle (many client-specific interfaces are better than one general-purpose interface)  
 D: DIP - Dependency Inversion Principle (Depend upon abstractions, not upon concretions, Dependency injection)  
