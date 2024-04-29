@@ -36,18 +36,17 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 	"*I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.*" - Lao Tzu  
 
 **LoD**   - Law of Demeter or principle of least knowledge  
-**SoC**   - Separation of Concerns  
-		layers: presentation, business(service), DAL - data access layer, DB - database  
+**SoC**   - Separation of Concerns; Layers: presentation, business(service), DAL - data access layer, DB - database  
 **DDD**   - Domain Driven Design  
-	Repository pattern [msdn/RP](https://msdn.microsoft.com/en-us/library/ff649690.aspx) (allows dependency injection and unit test for EF)  
-	DI - Dependecy Injection (IoC - Inversion of Control), loosely-coupled  
-PRG pattern - Post/Redirect/Get  
+ _ Repository Pattern [msdn/RP](https://msdn.microsoft.com/en-us/library/ff649690.aspx) (allows dependency injection and unit test for EF)  
+ _ **DI** - Dependecy Injection (**IoC** - Inversion of Control), loosely-coupled  
+**PRG** pattern - Post/Redirect/Get  
 **GRASP** - General Responsibility Assignment Software Patterns  
 
 **OOP** - Object Oriented Programming  
 **SOLID** (object-oriented design) [SolidInPictures](https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/)  
 S: SRP - Single Responsibility Principle (a class should have only a single responsibility)  
-O: OCP - Open/Closed Principle (software entities[class, function, etc] to be open for extension, but closed for modification)  
-L: LSP - Liskov Substitution Principle (objects should be replaceable with instances of their subtypes without altering the correctness of program)  
+O: OCP - Open/Closed Principle (entities[class, function,..] to be open for extension, closed for modification)  
+L: LSP - Liskov Substitution Principle (objects to be replaceable with instances of their subtypes without altering correctness of program)  
 I: ISP - Interface Segregation Principle (many client-specific interfaces are better than one general-purpose interface)  
 D: DIP - Dependency Inversion Principle ('Depend upon Abstractions', not depend upon concretions, Dependency injection one method)  
