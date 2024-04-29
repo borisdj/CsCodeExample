@@ -24,9 +24,9 @@ DO NOT use underscores (Hungarian notation), hyphens, or any other nonalphanumer
 AVOID using identifiers that conflict with keywords of widely used programming languages.  
 
 # Programming Principles:
-**DRY** . - Don't Repeat Yourself  
+**DRY** - Don't Repeat Yourself  
 **YAGNI** - You Aren't Gonna Need It (but have as much as you can out of the box)  
-**KISS**. - Keep it Simple, Stupid - [Kelly Johnson](https://en.wikipedia.org/wiki/Kelly_Johnson (engineer))  
+**KISS** - Keep it Simple, Stupid - [Kelly Johnson](https://en.wikipedia.org/wiki/Kelly_Johnson (engineer))  
 	"*Good design is as little design as possible.*" - Dieter Rams  
 	"*Everything should be made as simple as possible, but not simpler.*" - Albert Einstein  
 	"*Complexity is your enemy. Any fool can make something complicated. It's hard to keep things simple.*"-Richard Branson  
