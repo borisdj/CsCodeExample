@@ -48,4 +48,4 @@ S: SRP - Single Responsibility Principle (a class should have only a single resp
 O: OCP - Open/Closed Principle (entities[class, function,..] to be open for extension, closed for modification)  
 L: LSP - Liskov Substitution Principle (objects replaceable with subtypes instances without altering program correctness)  
 I: ISP - Interface Segregation Principle (many client-specific interfaces are better than one general-purpose interface)  
-D: DIP - Dependency Inversion Principle (Depend upon Abstractions, not upon concretions, Dependency injection 1 method)  
+D: DIP - Dependency Inversion Principle (Depend upon abstractions, not upon concretions, Dependency injection)  
