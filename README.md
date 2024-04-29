@@ -47,7 +47,7 @@ PRG pattern - Post/Redirect/Get
 **OOP** - Object Oriented Programming  
 **SOLID** (object-oriented design) [SolidInPictures](https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/)  
 S: SRP - Single Responsibility Principle (a class should have only a single responsibility)  
-O: OCP - Open/Closed Principle (software entities[classes, modules, functions..] should be open for extension, but closed for modification)  
+O: OCP - Open/Closed Principle (software entities[class, function, etc] to be open for extension, but closed for modification)  
 L: LSP - Liskov Substitution Principle (objects should be replaceable with instances of their subtypes without altering the correctness of program)  
 I: ISP - Interface Segregation Principle (many client-specific interfaces are better than one general-purpose interface)  
-D: DIP - Dependency Inversion Principle (one should 'Depend upon Abstractions'. Do not depend upon concretions, Dependency injection one method)  
+D: DIP - Dependency Inversion Principle ('Depend upon Abstractions', not depend upon concretions, Dependency injection one method)  
