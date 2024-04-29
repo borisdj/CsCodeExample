@@ -21,7 +21,7 @@ Class, Function (Method - in a class) and Property name - CapitalLetter, PascalC
 DO choose easily readable identifier names (example HorizontalAlignment more English-readable than AlignmentHorizontal).  
 DO favor readability over brevity.  
 The property name CanScrollHorizontally is better than ScrollableX (an obscure reference to the X-axis).  
-DO NOT use underscores(Hungarian notation), hyphens, or any other nonalphanumeric characters.  
+DO NOT use underscores (Hungarian notation), hyphens, or any other nonalphanumeric characters.  
 AVOID using identifiers that conflict with keywords of widely used programming languages.  
 
 # Programming Principles:
