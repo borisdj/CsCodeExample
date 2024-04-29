@@ -17,8 +17,8 @@ Containing:
 
 # Naming Conventions
 Local variables - nonCapitalLetter, camelCase.  
-Class, Function(Method - in a class) and Property name - CapitalLetter, PascalCase.  
-DO choose easily readable identifier names(exmample HorizontalAlignment more English-readable than AlignmentHorizontal).  
+Class, Function (Method - in a class) and Property name - CapitalLetter, PascalCase.  
+DO choose easily readable identifier names (example HorizontalAlignment more English-readable than AlignmentHorizontal).  
 DO favor readability over brevity.  
 The property name CanScrollHorizontally is better than ScrollableX (an obscure reference to the X-axis).  
 DO NOT use underscores(Hungarian notation), hyphens, or any other nonalphanumeric characters.  
@@ -26,14 +26,14 @@ AVOID using identifiers that conflict with keywords of widely used programming l
 
 # Programming Principles:
 **DRY** . - Don't repeat yourself  
-**YAGNI** - You Aren't Gonna Need It, but have as much as you can out of the box  
+**YAGNI** - You Aren't Gonna Need It (but have as much as you can out of the box)  
 **KISS**. - Keep it simple, stupid - Kelly Johnson  
-	"Good design is as little design as possible." - Dieter Rams  
-	"Everything should be made as simple as possible, but not simpler." - Albert Einstein  
-	"Complexity is your enemy. Any fool can make something complicated. It is hard to keep things simple." - Richard Branson  
-	"Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple." - Steve Jobs  
-	"I have made this letter longer than usual, only because I have not had the time to make it shorter." - Blaise Pascal  
-	"I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures." - Lao Tzu  
+	"*Good design is as little design as possible.*" - Dieter Rams  
+	"*Everything should be made as simple as possible, but not simpler.*" - Albert Einstein  
+	"*Complexity is your enemy. Any fool can make something complicated. It is hard to keep things simple.*" - Richard Branson  
+	"*Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple.*" - Steve Jobs  
+	"*I have made this letter longer than usual, only because I have not had the time to make it shorter.*" - Blaise Pascal  
+	"*I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.*" - Lao Tzu  
 
 **LoD**   - Law of Demeter or principle of least knowledge  
 **SoC**   - Separation of Concerns  
