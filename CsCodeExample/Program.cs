@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Data;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Xml;
-using System.Globalization;
-using System.Xml.Linq;
-using System.Diagnostics;
-//using System.ServiceModel.Syndication;
-//using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CsCodeExample
 {
@@ -44,6 +34,8 @@ namespace CsCodeExample
             // primitive(built in) type / object (value range)
             /*
             bool    / Boolean   (true, false)                   [default: false]
+            byte    / Int8      (+- 127)                        [default: 0]
+            short   / Int16     (+- 32,767)                     [default: 0]
             int     / Int32     (+- 2,147,483,647)              [default: 0]
             long    / Int64     (+- 9,223,372,036,854,775,807)  [default: 0]
             float               (+- 1.5 E−45 to +- 3.40282347 E+38)            [default: 0]  Precision: ~6-9 digits
@@ -100,7 +92,7 @@ namespace CsCodeExample
             decimal secondAmount = inputAmount; // implicit cast
             int thirdAmount = (int)secondAmount; // explicit cast
             string strNum = "1234";
-            int outputNum = Int32.Parse(strNum);
+            int outputNum = int.Parse(strNum);
 
             Console.WriteLine("DECLARATION");
             Console.WriteLine("T or F: " + isAdmin);
@@ -131,14 +123,14 @@ namespace CsCodeExample
             Console.WriteLine("a + b = {0} + {1} = {2}", x, y, result);
             Console.WriteLine($"a + b = {x} + {y} = {result}");
 
-            x = x * 2;
-            //x *= 2;
+            x *= 2;
+            //x = x * 2;
 
-            x = x + 1;
-            //x++;
+            x++;
+            //x = x + 1;
 
-            //x = x - 1;
             //x--;
+            //x = x - 1;
 
             Console.WriteLine("x = x * 2 + 1 = " + x);
             Console.WriteLine("r = x++ = " + x++); // output is the value of x BEFORE incrementing
@@ -365,10 +357,12 @@ namespace CsCodeExample
             }
 
             // List
-            List<string> words = new List<string>();
-            words.Add("one");
-            words.Add("two");
-            words.Add("three");
+            List<string> words = new List<string>
+            {
+                "one"),
+                "two"),
+                "three",
+            };
             words.Add("four");
             words.Add("five");
             words.Remove("three");
@@ -387,24 +381,27 @@ namespace CsCodeExample
                 Console.Write(letter + " ");
             }
             // Dictionary
-            Dictionary<String, int> accounts = new Dictionary<String, int>();
-            accounts.Add("Cash", 110);
-            accounts.Add("Receivable", 120);
-            accounts.Add("Supplies", 130);
+            Dictionary<String, int> accounts = new Dictionary<String, int>
+            {
+                { "Cash", 110 },
+                { "Receivable", 120 },
+                { "Supplies", 130 },
+            };
             accounts.Add("Insurance", 150);
 
-            int account;
-            accounts.TryGetValue("Supplies", out account);
+            accounts.TryGetValue("Supplies", out int account);
 
             Console.Write("\nSupplies account: " + account);
 
 
-            List<string> sentences = new List<string>();
-            sentences.Add("I am playing");
-            sentences.Add("I play");
-            sentences.Add("You are going");
-            sentences.Add("You go");
-            sentences.Add("He is running");
+            List<string> sentences = new List<string>
+            {
+                "I am playing",
+                "I play",
+                "You are going",
+                "You go",
+                "He is running"
+            };
             sentences.Remove("He runs");
 
             // Lambda expression =>
@@ -413,13 +410,18 @@ namespace CsCodeExample
 
             Console.WriteLine("\nING:");
             foreach (var sentence in ingEndSentences2)
+            {
                 Console.WriteLine(sentence);
+            }
 
             List<string> ingEndSentences3 = new List<string>();
             foreach (var sentence in sentences)
+            {
                 if (sentence.EndsWith("ing"))
+                {
                     ingEndSentences3.Add(sentence);
-
+                }
+            }
             #endregion
 
             #region Parsing and Exceptions
@@ -499,9 +501,9 @@ namespace CsCodeExample
 
             Console.WriteLine("All Genders:");
             foreach (Gender gender in Enum.GetValues(typeof(Gender)))
+            {
                 Console.WriteLine("- {0}", gender.GetDescription());
-
-
+            }
             #endregion
 
             #region Classes
@@ -538,9 +540,11 @@ namespace CsCodeExample
             ComplexNumber complex1 = new ComplexNumber(5, 3);
             double r = complex1.Real;
 
-            ComplexNumber complex2 = new ComplexNumber();
-            complex2.Real = 6;
-            complex2.Imag = 7;
+            ComplexNumber complex2 = new ComplexNumber
+            {
+                Real = 6,
+                Imag = 7
+            };
 
             ComplexNumber complex3;
             complex3 = new ComplexNumber()
@@ -624,8 +628,7 @@ namespace CsCodeExample
             {
                 Console.Write("\nInput number:");
                 input = Console.ReadLine();
-                int inputNum;
-                bool inputValid = int.TryParse(input, out inputNum);
+                bool inputValid = int.TryParse(input, out int inputNum);
                 if (inputValid)
                     Console.WriteLine("Number is valid. (Press Enter to Finish)\n");
                 else
@@ -737,7 +740,7 @@ namespace CsCodeExample
             int result = 1;
             for (int i = 2; i <= n; i++)
             {
-                result = result * i;
+                result *= i;
             }
             return result;
         }
