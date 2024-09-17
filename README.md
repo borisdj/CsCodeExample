@@ -15,6 +15,8 @@ Containing:
 - Console Input
 - File Read & Write
 
+Logo: <img src="CsCodeLogo.png" height=42>  
+
 # Naming Conventions
 Local variables - nonCapitalLetter, camelCase.  
 Class, Function (Method - in a class) and Property name - CapitalLetter, PascalCase.  
