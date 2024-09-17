@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Linq;
+﻿using System.Data;
 
 namespace CsCodeExample
 {
@@ -359,8 +355,8 @@ namespace CsCodeExample
             // List
             List<string> words = new List<string>
             {
-                "one"),
-                "two"),
+                "one",
+                "two",
                 "three",
             };
             words.Add("four");
@@ -674,12 +670,11 @@ namespace CsCodeExample
                             wr.WriteLine(complexNumber.ToCSV());
                     }
                 }
-            #endregion
-
             Console.WriteLine("Press Enter for Quit.");
             Console.ReadKey();
             // Don't copy code, all that is repeated should be in functions
         }
+        #endregion
 
         public static decimal Add(decimal xRealOrImag, decimal yRealOrImag)
         {
