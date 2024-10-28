@@ -28,7 +28,7 @@ And even with community license, if you want help development, you can make a DO
 ## Contributing
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests.  
 When opening issues do write detailed explanation of the problem or feature with reproducible example.  
-Want to **Contact** for Development & Consulting: [www.codis.tech](http://www.codis.tech) (*Quality Assuarnce*)  
+Want to **Contact** for Development & Consulting: [www.codis.tech](http://www.codis.tech) (*Quality Assurance*)  
 
 **Also take a look into others packages:</br>
 Open source (MIT or cFOSS) authored [.Net libraries](https://infopedia.io/dot-net-libraries/) (@**Infopedia.io** personal blog post)
